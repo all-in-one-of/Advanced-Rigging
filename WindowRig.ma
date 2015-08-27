@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: WindowRig.ma
-//Last modified: Thu, Aug 27, 2015 10:08:33 AM
+//Last modified: Thu, Aug 27, 2015 01:31:14 PM
 //Codeset: UTF-8
 requires maya "2015";
 currentUnit -l centimeter -a degree -t film;
@@ -12,12 +12,12 @@ fileInfo "osv" "Mac OS X 10.9.5";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.2255062915043595 14.319129774202167 55.216405957188869 ;
-	setAttr ".r" -type "double3" -8.7383527295933607 368.19999999994451 7.0293296084907232e-16 ;
+	setAttr ".t" -type "double3" 19.769590002035084 14.521194245524571 24.228911466238042 ;
+	setAttr ".r" -type "double3" -15.338352729593371 399.3999999999437 -1.0289945948206723e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 57.345980460684487;
+	setAttr ".coi" 33.69973082790959;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -121,14 +121,22 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 		-10.404032 0 -0.55905467 -10.404032 0 -0.55905467 -10.404032 0 -0.55905467 -10.404032 
 		0 -0.55905467 -10.404032;
 createNode transform -n "pPlane2" -p "pPlane1";
-	setAttr ".t" -type "double3" 0 0.15835271194410072 3.5161365362435131e-17 ;
+	setAttr ".t" -type "double3" 0 0.15835271194410072 0 ;
+	setAttr -l on ".tx";
+	setAttr -l on ".ty";
+	setAttr ".mntl" -type "double3" -1 -1 -9.55 ;
+	setAttr ".mxtl" -type "double3" 1 1 0 ;
+	setAttr ".mtze" yes;
+	setAttr ".xtze" yes;
+	setAttr ".mnrl" -type "double3" -45 0 -45 ;
+	setAttr ".mxrl" -type "double3" 45 0 45 ;
 createNode mesh -n "pPlaneShape2" -p "pPlane2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.48593848943710327 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 108 ".uvst[0].uvsp[0:107]" -type "float2" 0 0 0.97187698 0
+	setAttr -s 116 ".uvst[0].uvsp[0:115]" -type "float2" 0 0 0.97187698 0
 		 0 1 0.97187698 1 0.039229803 1 0.039229803 0 0 0.96151614 0.039229803 0.96151614
 		 0.97187698 0.96151614 0.9321171 1 0.9321171 0.96151614 0.9321171 0 0.97187698 0.039931439
 		 0.9321171 0.039931435 0.039229803 0.039931435 0 0.039931439 0.45927197 1 0.45927197
@@ -151,7 +159,9 @@ createNode mesh -n "pPlaneShape2" -p "pPlane2";
 		 0.47972956 0.039229803 0.96151614 0.45927197 0.96151614 0.45927197 1 0.45927197 0
 		 0.45927197 0.039931435 0.50068319 0.47972953 0.45927197 0.47972956 0.97187698 0.52216631
 		 0.9321171 0.52216631 0.50068319 0.52216625 0.45927197 0.52216631 0.039229803 0.52216631
-		 0 0.52216631;
+		 0 0.52216631 0.9321171 0.96151614 0.9321171 0.039931435 0.9321171 0.039931435 0.039229803
+		 0.039931435 0.039229803 0.96151614 0.039229803 0.039931435 0.9321171 0.96151614 0.039229803
+		 0.96151614;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -297,29 +307,29 @@ createNode mesh -n "pPlaneShape2" -p "pPlane2";
 		f 4 2 87 -89 -86
 		mu 0 4 1 12 83 82
 		f 4 32 60 -94 -93
-		mu 0 4 21 10 85 84
+		mu 0 4 21 108 85 84
 		f 4 -32 94 95 -66
 		mu 0 4 9 20 86 74
 		f 4 36 84 -99 -98
 		mu 0 4 23 11 81 87
 		f 4 21 99 -101 -90
-		mu 0 4 13 22 89 88
+		mu 0 4 109 22 89 88
 		f 4 17 102 -104 -88
 		mu 0 4 12 30 90 83
 		f 4 50 89 -107 -105
-		mu 0 4 31 13 88 91
+		mu 0 4 31 110 88 91
 		f 4 -57 107 108 -80
-		mu 0 4 14 34 93 92
+		mu 0 4 111 34 93 92
 		f 4 -23 81 111 -110
 		mu 0 4 35 15 80 94
 		f 4 11 112 -114 -70
-		mu 0 4 7 17 96 95
+		mu 0 4 112 17 96 95
 		f 4 -5 71 116 -115
 		mu 0 4 16 4 75 97
 		f 4 5 117 -119 -78
 		mu 0 4 5 19 98 79
 		f 4 27 79 -122 -120
-		mu 0 4 18 14 92 99
+		mu 0 4 18 113 92 99
 		f 4 -25 114 123 -95
 		mu 0 4 20 16 97 86
 		f 4 -53 125 126 -100
@@ -331,13 +341,13 @@ createNode mesh -n "pPlaneShape2" -p "pPlane2";
 		f 4 38 61 -135 -132
 		mu 0 4 24 8 72 102
 		f 4 16 132 -136 -61
-		mu 0 4 10 25 103 85
+		mu 0 4 114 25 103 85
 		f 4 -36 92 139 -137
 		mu 0 4 26 21 84 104
 		f 4 28 137 -141 -113
 		mu 0 4 17 27 105 96
 		f 4 -9 69 144 -142
-		mu 0 4 28 7 95 106
+		mu 0 4 28 115 95 106
 		f 4 -48 142 145 -69
 		mu 0 4 6 29 107 77
 		f 4 49 131 -147 -103
@@ -2911,8 +2921,8 @@ createNode shadingEngine -n "blinn1SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 128;
+	setAttr ".unw" 128;
 select -ne :renderPartition;
 	setAttr -s 4 ".st";
 select -ne :renderGlobalsList1;
