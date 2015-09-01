@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: WindowRig.ma
-//Last modified: Thu, Aug 27, 2015 01:31:14 PM
+//Last modified: Tue, Sep 01, 2015 12:04:17 PM
 //Codeset: UTF-8
 requires maya "2015";
 currentUnit -l centimeter -a degree -t film;
@@ -86,8 +86,24 @@ createNode mesh -n "pPlaneShape3" -p "pPlane3";
 		0 0 -0.016192198 0.13448593 0 -0.015374005 0 0 -0.016192198 0 0 -0.015374005 0 0 
 		-0.016192198;
 createNode transform -n "pPlane1" -p "pPlane3";
-	setAttr ".t" -type "double3" 0.12836392639279526 1.1003717287520181 7.002076736592052 ;
+	setAttr ".t" -type "double3" 0.13 1.1 7 ;
 	setAttr ".s" -type "double3" 2.1262070926872418 1 1.3023627883983073 ;
+	setAttr ".mntl" -type "double3" 0.13 1.1 7 ;
+	setAttr ".mxtl" -type "double3" 0.13 1.1 7 ;
+	setAttr ".mtxe" yes;
+	setAttr ".mtye" yes;
+	setAttr ".mtze" yes;
+	setAttr ".xtxe" yes;
+	setAttr ".xtye" yes;
+	setAttr ".xtze" yes;
+	setAttr ".mnrl" -type "double3" 0 0 0 ;
+	setAttr ".mxrl" -type "double3" 0 0 0 ;
+	setAttr ".mrxe" yes;
+	setAttr ".mrye" yes;
+	setAttr ".mrze" yes;
+	setAttr ".xrxe" yes;
+	setAttr ".xrye" yes;
+	setAttr ".xrze" yes;
 createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -128,8 +144,14 @@ createNode transform -n "pPlane2" -p "pPlane1";
 	setAttr ".mxtl" -type "double3" 1 1 0 ;
 	setAttr ".mtze" yes;
 	setAttr ".xtze" yes;
-	setAttr ".mnrl" -type "double3" -45 0 -45 ;
-	setAttr ".mxrl" -type "double3" 45 0 45 ;
+	setAttr ".mnrl" -type "double3" 0 0 0 ;
+	setAttr ".mxrl" -type "double3" 0 0 0 ;
+	setAttr ".mrxe" yes;
+	setAttr ".mrye" yes;
+	setAttr ".mrze" yes;
+	setAttr ".xrxe" yes;
+	setAttr ".xrye" yes;
+	setAttr ".xrze" yes;
 createNode mesh -n "pPlaneShape2" -p "pPlane2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
