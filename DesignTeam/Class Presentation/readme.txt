@@ -1,0 +1,1 @@
+Place the photos that you would like presented to the class tomorrow in this folder with the file name including your own. Ex. "concept1_samo". I will organize them so they will appear in order of creator for the presentation. 
